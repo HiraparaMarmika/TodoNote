@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 import Mytodos from "../Mytodos/Mytodos";
 import Addtodo from "../Addtodo/Addtodo";
 import Form from "../Form/Form";
@@ -18,20 +18,30 @@ const getdata = () => {
   }
 };
 export default function Home() {
+  const intialstate = [{ complete: false }];
+
+  const reducer = (state, action) => {
+    console.log(state, action);
+
+    return state;
+  };
+
+  const [state, despatch] = useReducer(reducer, intialstate);
+
   const { mode } = useContext(Mycontext);
   const [formData, setFormData] = useState(getdata);
   const [isEdit, setIsEdit] = useState(false);
   const [editTodo, setEditTodo] = useState("");
-  const completeHandler = (complete) => {
-    const completeId = formData.map((item) => {
-      if (complete == item.id) {
-        return { ...item, complete: !item.complete };
-      }
-      return item;
-    });
-    setFormData(completeId);
-    console.log(completeId);
-  };
+  // const completeHandler = (complete) => {
+  //   const completeId = formData.map((item) => {
+  //     if (complete == item.id) {
+  //       return { ...item, complete: !item.complete };
+  //     }
+  //     return item;
+  //   });
+  //   setFormData(completeId);
+  //   console.log(completeId);
+  // };
   const formdataHandler = (alldata) => {
     setFormData((prev) => {
       return [
@@ -88,8 +98,8 @@ export default function Home() {
                     key={item.id}
                     todonote={item.todonote}
                     deleteHandler={() => deleteHandler(item.id)}
-                    completeHandler={() => completeHandler(item.id)}
-                    complete={item.complete}
+                    // completeHandler={() => completeHandler(item.id)}
+                    // complete={item.complete}
                     editHandler={() => editHandler(item.id)}
                   />
                 );
