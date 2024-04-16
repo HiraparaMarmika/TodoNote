@@ -1,0 +1,47 @@
+.login-page {
+  background-color: #393939;
+  height: 100vh;
+  width: 100vw;
+}
+
+.login-box {
+  width: 39%;
+  margin: auto;
+  border-radius: 6px;
+  background-color: #272727;
+  position: relative;
+  top: 8%;
+  padding: 40px 40px;
+  color: white;
+}
+.login-box h1 {
+  text-align: center;
+}
+.login-box .login-start {
+  text-align: center;
+  color: white;
+}
+.login-box p {
+  text-align: start;
+  color: red;
+}
+label {
+  display: block;
+  margin-top: 30px;
+}
+input {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 15px;
+  padding: 15px;
+}
+.login-btn button {
+  border: none;
+  background-color: #ea1741;
+  border-radius: 6px;
+  padding: 10px 30px;
+  margin-top: 40px;
+}
+.login-btn {
+  text-align: center;
+}

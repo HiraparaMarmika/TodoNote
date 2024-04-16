@@ -1,0 +1,29 @@
+.addtodo {
+  padding: 5px 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px auto;
+  border-radius: 6px;
+}
+input {
+  border: none;
+  width: 100%;
+}
+input:focus-visible {
+  outline: none;
+}
+::placeholder {
+  font-size: 17px;
+}
+.addtodo button {
+  border: 3px solid yellow;
+  padding: 10px 20px;
+  background-color: yellow;
+  border-radius: 6px;
+}
+.addtodo button:hover {
+  background-color: black;
+  color: yellow;
+}

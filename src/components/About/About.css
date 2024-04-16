@@ -1,0 +1,42 @@
+.about {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.about h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  position: relative;
+}
+.text {
+  color: white;
+}
+.text-black {
+  color: black;
+}
+.about h1::after {
+  position: absolute;
+  content: "";
+  bottom: 2px;
+  left: -20px;
+  width: 100%;
+  background-color: yellow;
+  height: 4px;
+}
+.about-text {
+  padding: 10px 0;
+  font-size: 20px;
+}
+.about-text-para {
+  color: white;
+}
+.about-text-para-black {
+  color: black;
+}
+.about-text span {
+  color: red;
+}
+.about-text div {
+  margin-top: 20px;
+}

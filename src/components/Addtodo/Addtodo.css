@@ -1,0 +1,29 @@
+.todo-note {
+  background-color: #fff2aa;
+  padding: 30px;
+  border-radius: 6px;
+  width: 30%;
+}
+.todo-icons {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  gap: 5px;
+  margin-top: 60px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.checkicon {
+  color: yellow;
+  cursor: pointer;
+}
+.check-icon {
+  color: blue;
+  text-decoration: line-through;
+}
+.penicon {
+  color: #437eeb;
+}
+.deleteicon {
+  color: #dc143c;
+}

@@ -1,0 +1,40 @@
+.alertback {
+  background-color: #000000b4;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+}
+.messagebox {
+  background-color: gray;
+  width: 30%;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 8px;
+  position: absolute;
+  left: 34%;
+  top: 20%;
+  z-index: 10;
+}
+.messagebox p{color: white;text-align: center;}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
+}
+.logout button {
+  background-color: #dd4040;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+.cancle button {
+  background-color: #05090f;
+  color:wheat;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+}

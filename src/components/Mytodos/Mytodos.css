@@ -1,0 +1,16 @@
+.todo-checkicon {
+  color: yellow;
+}
+.todo-heading {
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.todopara {
+  color: white;
+}
+.todopara-black {
+  color: black;
+}
