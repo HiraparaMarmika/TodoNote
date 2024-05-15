@@ -4,7 +4,7 @@
   width: 100vw;
 }
 .reg-box {
-  width: 40%;
+  width: 39%;
   margin: auto;
   border-radius: 6px;
   background-color: #272727;
@@ -41,4 +41,12 @@ input {
 }
 .validation {
   color: red;
+}
+@media only screen and (max-width: 600px) {
+  .reg-box {
+    width: 80%;
+  }
+  .reg-box form {
+    width: 100%;
+  }
 }

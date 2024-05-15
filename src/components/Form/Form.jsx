@@ -10,9 +10,6 @@ export default function Form({
   setFormData,
   onEdit,
 }) {
-  //array of all data
-  //selected data
-
   const [alldata, setAlldata] = useState({
     todonote: "",
   });
@@ -22,7 +19,6 @@ export default function Form({
     setAlldata((prev) => {
       return { ...prev, [name]: value };
     });
-    console.log(alldata);
   };
 
   const submitHandler = (event) => {
@@ -35,8 +31,8 @@ export default function Form({
       todonote: "",
     });
   };
-  console.log(editTodo);
-  console.log(alldata);
+  // console.log(editTodo);
+  // console.log(alldata);
 
   useEffect(() => {
     setAlldata((prev) => {

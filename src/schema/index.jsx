@@ -6,7 +6,7 @@ export const signupscema = Yup.object({
   password: Yup.string().min(6).required("enter your password!"),
   confirmpassword: Yup.string()
     .required()
-    .oneOf([Yup.ref("password"), null], "password not match!"),
+    .oneOf([Yup.ref("password"), null], "password must match"),
 });
 
 export const loginscema = Yup.object({

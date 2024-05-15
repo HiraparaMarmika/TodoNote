@@ -1,8 +1,9 @@
 import React from "react";
 import "./Registration.css";
 import { useFormik } from "formik";
-import { signupscema } from "../../schemas";
+
 import { Navigate, useNavigate } from "react-router-dom";
+import { signupscema } from "../../schema";
 const initialValues = {
   name: "",
   email: "",
@@ -20,7 +21,7 @@ export default function Registration() {
         console.log(values);
         localStorage.setItem("reg", JSON.stringify(values));
         action.resetForm();
-        navigatereg("/");
+        navigatereg("/login");
       },
     });
 

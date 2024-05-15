@@ -18,36 +18,46 @@ const getdata = () => {
   }
 };
 export default function Home() {
-  const intialstate = [{ complete: false }];
+  // const reducer = (state, action) => {
+  //   console.log(state);
+  //   switch (action.type) {
+  //     case "COMPLETE":
+  //       return state.map((item) => {
+  //         console.log(item);
+  //         if (action.id == item.id) {
+  //           return { ...item, complete: !item.complete };
+  //         }
+  //         return item;
+  //       });
+  //     default:
+  //       return state;
+  //   }
+  // };
 
-  const reducer = (state, action) => {
-    console.log(state, action);
+  // const [state, despatch] = useReducer(reducer, getdata());
 
-    return state;
-  };
-
-  const [state, despatch] = useReducer(reducer, intialstate);
+  // const completeHandler = (completeId) => {
+  //   console.log(completeId);
+  //   despatch({ type: "COMPLETE", id: completeId });
+  // };
 
   const { mode } = useContext(Mycontext);
   const [formData, setFormData] = useState(getdata);
   const [isEdit, setIsEdit] = useState(false);
   const [editTodo, setEditTodo] = useState("");
-  // const completeHandler = (complete) => {
-  //   const completeId = formData.map((item) => {
-  //     if (complete == item.id) {
-  //       return { ...item, complete: !item.complete };
-  //     }
-  //     return item;
-  //   });
-  //   setFormData(completeId);
-  //   console.log(completeId);
-  // };
+  const completeHandler = (complete) => {
+    const completeId = formData.map((item) => {
+      if (complete == item.id) {
+        return { ...item, complete: !item.complete };
+      }
+      return item;
+    });
+    setFormData(completeId);
+    console.log(completeId);
+  };
   const formdataHandler = (alldata) => {
     setFormData((prev) => {
-      return [
-        ...prev,
-        { todonote: alldata.todonote, id: uuid(), complete: false },
-      ];
+      return [...prev, { todonote: alldata.todonote, id: uuid() }];
     });
     toast.success(" Data Added Successfully!");
 
@@ -98,8 +108,8 @@ export default function Home() {
                     key={item.id}
                     todonote={item.todonote}
                     deleteHandler={() => deleteHandler(item.id)}
-                    // completeHandler={() => completeHandler(item.id)}
-                    // complete={item.complete}
+                    completeHandler={() => completeHandler(item.id)}
+                    complete={item.complete}
                     editHandler={() => editHandler(item.id)}
                   />
                 );

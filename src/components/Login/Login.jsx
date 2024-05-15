@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
-import { loginscema } from "../../schemas";
+import { loginscema } from "../../schema";
+
 const initialValues = {
   email: "",
   password: "",
